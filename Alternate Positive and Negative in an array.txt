@@ -1,0 +1,25 @@
+#include <bits/stdc++.h> 
+
+void posAndNeg(vector<int> &arr)
+{
+    // Write your code here.
+    vector<int>first;
+    vector<int>sec;
+
+    for(int i=0; i<arr.size(); i++){
+        if(arr[i] >= 0)
+            first.push_back(arr[i]);
+        else
+            sec.push_back(arr[i]);
+    }
+
+    arr.clear();
+    
+    int j=0,k=0;
+    while(j < first.size() || k < sec.size()){
+        if(j < first.size())
+            arr.push_back(first[j++]);
+        if(k < sec.size())
+            arr.push_back(sec[k++]);
+    }
+}
